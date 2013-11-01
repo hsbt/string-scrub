@@ -1,6 +1,8 @@
 #include <ruby.h>
 #include <ruby/encoding.h>
 
+#ifndef HAVE_RB_STR_SCRUB
+
 #ifndef TRUE
 #define TRUE 1
 #endif
@@ -358,9 +360,13 @@ str_scrub_bang(int argc, VALUE *argv, VALUE str)
     return str;
 }
 
+#endif
+
 void
 Init_scrub(void)
 {
+#ifndef HAVE_RB_STR_SCRUB
     rb_define_method(rb_cString, "scrub", rb_str_scrub, -1);
     rb_define_method(rb_cString, "scrub!", str_scrub_bang, -1);
+#endif
 }
