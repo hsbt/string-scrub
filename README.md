@@ -1,6 +1,6 @@
 # String::Scrub
 
-TODO: Write a gem description
+String#scrub for Ruby 2.0.0
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+see [testcase](https://github.com/hsbt/string-scrub/blob/master/test/test_scrub.rb)
 
 ## Contributing
 
