@@ -1,6 +1,6 @@
 # coding: US-ASCII
 require 'test/unit'
-require_relative '../ext/string/scrub'
+require_relative '../scrub'
 
 class TestScrub < Test::Unit::TestCase
   module AESU
