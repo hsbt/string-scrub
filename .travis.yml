@@ -1,5 +1,5 @@
 language: ruby
 rvm:
   - 2.0.0
-before_script: cd ext/string; ruby extconf.rb; make
+before_script: ruby ext/string/extconf.rb; make
 script: bundle exec ruby -Ilib:test test/test_scrub.rb

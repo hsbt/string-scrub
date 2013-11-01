@@ -14,7 +14,7 @@ rdoc
 test/tmp
 test/version_tmp
 tmp
-ext/string/*.o
-ext/string/Makefile
-ext/string/*.bundle
-ext/string/*.so
+*.o
+Makefile
+*.bundle
+*.so
