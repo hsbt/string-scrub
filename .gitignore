@@ -18,3 +18,4 @@ tmp
 Makefile
 *.bundle
 *.so
+mkmf.log
