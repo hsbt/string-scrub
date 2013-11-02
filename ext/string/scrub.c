@@ -177,7 +177,7 @@ str_scrub0(int argc, VALUE *argv, VALUE str)
 		    if (!rep7bit_p) cr = ENC_CODERANGE_VALID;
 		}
 		else {
-		    repl = rb_yield(rb_enc_str_new(p1, clen, enc));
+		    repl = rb_yield(rb_enc_str_new(p, clen, enc));
 		    repl = str_compat_and_valid(repl, enc);
 		    rb_str_buf_cat(buf, RSTRING_PTR(repl), RSTRING_LEN(repl));
 		    if (ENC_CODERANGE(repl) == ENC_CODERANGE_VALID)
