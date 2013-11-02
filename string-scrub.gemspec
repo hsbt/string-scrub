@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "string-scrub"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["SHIBATA Hiroshi"]
   spec.email         = ["shibata.hiroshi@gmail.com"]
   spec.summary       = %q{String#scrub for Ruby 2.0.0}
