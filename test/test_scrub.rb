@@ -17,6 +17,7 @@ class TestScrub < Test::Unit::TestCase
     assert_not_same(str, str.scrub)
     str.force_encoding(Encoding::ISO_2022_JP) # dummy encoding
     assert_not_same(str, str.scrub)
+    assert_nothing_raised(ArgumentError) {str.scrub(nil)}
 
     assert_equal("\uFFFD\uFFFD\uFFFD", u("\x80\x80\x80").scrub)
     assert_equal("\uFFFDA", u("\xF4\x80\x80A").scrub)
@@ -42,6 +43,9 @@ class TestScrub < Test::Unit::TestCase
     assert_raise(TypeError){ u("\xE3\x81\x82\xE3\x81").scrub{1} }
     assert_raise(ArgumentError){ u("\xE3\x81\x82\xE3\x81\x82\xE3\x81").scrub{u("\x81")} }
     assert_equal(e("\xA4\xA2\xA2\xAE"), e("\xA4\xA2\xA4").scrub{e("\xA2\xAE")})
+
+    assert_equal(u("\x81"), u("a\x81").scrub {|c| break c})
+    assert_raise(ArgumentError) {u("a\x81").scrub {|c| c}}
 
     assert_equal("\uFFFD\u3042".encode("UTF-16BE"),
                  "\xD8\x00\x30\x42".force_encoding(Encoding::UTF_16BE).
