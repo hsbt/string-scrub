@@ -1,4 +1,4 @@
-# String::Scrub
+# String#scrub
 
 String#scrub for Ruby 2.0.0
 
