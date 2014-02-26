@@ -11,6 +11,9 @@
 #endif
 
 #define STR_ENC_GET(str) rb_enc_from_index(ENCODING_GET(str))
+#ifndef UNREACHABLE
+# define UNREACHABLE
+#endif
 
 static inline const char *
 search_nonascii(const char *p, const char *e)
@@ -56,7 +59,13 @@ str_compat_and_valid(VALUE str, rb_encoding *enc)
     str = StringValue(str);
     cr = rb_enc_str_coderange(str);
     if (cr == ENC_CODERANGE_BROKEN) {
+#ifdef PRIsVALUE
 	rb_raise(rb_eArgError, "replacement must be valid byte sequence '%+"PRIsVALUE"'", str);
+#else
+	str = rb_inspect(str);
+	rb_raise(rb_eArgError, "replacement must be valid byte sequence '%s'", RSTRING_PTR(str));
+	RB_GC_GUARD(str);
+#endif
     }
     else if (cr == ENC_CODERANGE_7BIT) {
 	rb_encoding *e = STR_ENC_GET(str);
