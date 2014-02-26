@@ -1,6 +1,6 @@
 # String#scrub
 
-String#scrub for Ruby 2.0.0
+String#scrub for Ruby 2.0.0 and 1.9.3
 
 ## Installation
 
