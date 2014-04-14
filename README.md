@@ -5,6 +5,15 @@
 
 String#scrub for Ruby 2.0.0 and 1.9.3
 
+## What does the scrub method do?
+If the given string contains an invalid byte sequence then that invalid byte sequence is replaced with the [unicode replacement character](http://www.fileformat.info/info/unicode/char/0fffd/index.htm) (�) and a new string is returned.
+
+You may also set a replacement character of your choice by passing that character to the method.
+
+## Usage
+
+See [testcase](https://github.com/hsbt/string-scrub/blob/master/test/test_scrub.rb)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,10 +27,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install string-scrub
-
-## Usage
-
-see [testcase](https://github.com/hsbt/string-scrub/blob/master/test/test_scrub.rb)
 
 ## Contributing
 
