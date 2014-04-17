@@ -21,7 +21,7 @@ class TestScrub < Test::Unit::TestCase
     assert_equal("\uFFFD\uFFFD\uFFFD", u("\x80\x80\x80").scrub)
     assert_equal("\uFFFDA", u("\xF4\x80\x80A").scrub)
 
-    # exapmles in Unicode 6.1.0 D93b
+    # examples in Unicode 6.1.0 D93b
     assert_equal("\x41\uFFFD\uFFFD\x41\uFFFD\x41",
                  u("\x41\xC0\xAF\x41\xF4\x80\x80\x41").scrub)
     assert_equal("\x41\uFFFD\uFFFD\uFFFD\x41",
