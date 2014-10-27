@@ -2,5 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
   - 2.0.0
-before_script: ruby ext/string/extconf.rb; make
-script: bundle exec ruby test/test_scrub.rb
+before_script: rake compile
+script: bundle exec rake test
