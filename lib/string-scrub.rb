@@ -1,1 +1,1 @@
-require 'string/scrub'
+require 'string-scrub.so'
