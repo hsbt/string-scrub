@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "string-scrub"
   spec.version       = "0.0.3"
   spec.authors       = ["SHIBATA Hiroshi"]
-  spec.email         = ["shibata.hiroshi@gmail.com"]
+  spec.email         = ["hsbt@ruby-lang.org"]
   spec.summary       = %q{String#scrub for Ruby 2.0.0 and 1.9.3}
   spec.description   = %q{String#scrub for Ruby 2.0.0 and 1.9.3}
   spec.homepage      = "https://github.com/hsbt/string-scrub"
