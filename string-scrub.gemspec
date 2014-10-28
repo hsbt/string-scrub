@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "string-scrub"
-  spec.version       = "0.0.3"
+  spec.version       = "0.0.4"
   spec.authors       = ["SHIBATA Hiroshi"]
   spec.email         = ["hsbt@ruby-lang.org"]
   spec.summary       = %q{String#scrub for Ruby 2.0.0 and 1.9.3}
