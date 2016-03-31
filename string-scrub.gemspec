@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{String#scrub for Ruby 2.0.0 and 1.9.3}
   spec.description   = %q{String#scrub for Ruby 2.0.0 and 1.9.3}
   spec.homepage      = "https://github.com/hsbt/string-scrub"
-  spec.license       = "MIT"
+  spec.license       = "2-clause BSDL"
 
   spec.files         = `git ls-files`.split($/)
   spec.extensions    = ["ext/string/extconf.rb"]
