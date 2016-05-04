@@ -8,3 +8,5 @@ Rake::ExtensionTask.new('scrub') do |ext|
   ext.lib_dir = 'lib/string'
 end
 Rake::TestTask.new {|t| t.libs << 'test' }
+
+task :default => [:compile, :test]
